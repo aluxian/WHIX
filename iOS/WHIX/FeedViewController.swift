@@ -35,34 +35,37 @@ extension Resource {
     }
 }
 
-// Inherite GeminiCell
-class CustomCell: GeminiCell {
-    
-}
-
 class FeedViewController: UIViewController, UICollectionViewDelegate {
     
     // Inherite GeminiCollectionView
-    @IBOutlet weak var collectionView: GeminiCollectionView!
+    @IBOutlet weak var collectionView: GeminiCollectionView! {
+        didSet {
+            let nib = UINib(nibName: "PlayerCollectionViewCell", bundle: nil)
+            collectionView.register(nib, forCellWithReuseIdentifier: "PlayerCollectionViewCell")
+            collectionView.delegate   = self
+            collectionView.dataSource = self
+            collectionView.isPagingEnabled = true
+            
+            if #available(iOS 11.0, *) {
+                collectionView.contentInsetAdjustmentBehavior = .never
+            }
+            
+            collectionView.gemini
+                .cubeAnimation()
+                .shadowEffect(.fadeIn)
+        }
+    }
     
     var movieURLs: [URL] = Resource.movie.urls
-    
-    // Configure animation and properties
-    func configureAnimation() {
-        collectionView.gemini
-            .circleRotationAnimation()
-            .radius(400)
-            .rotateDirection(.clockwise)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setting of UICollectionViewFlowLayout
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .horizontal
-            collectionView.collectionViewLayout = layout
-        }
+//        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+//            layout.scrollDirection = .horizontal
+//            collectionView.collectionViewLayout = layout
+//        }
     }
     
 }
@@ -78,7 +81,7 @@ extension FeedViewController {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        (collectionView.visibleCells.first as? FeedCell)?.playerView.play()
+        (collectionView.visibleCells.first as? PlayerCollectionViewCell)?.playerView.play()
     }
 }
 
@@ -93,7 +96,7 @@ extension FeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! PlayerCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCollectionViewCell", for: indexPath) as! PlayerCollectionViewCell
         cell.configure(with: movieURLs[indexPath.row])
         return cell
     }

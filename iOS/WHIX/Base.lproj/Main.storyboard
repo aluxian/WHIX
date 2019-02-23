@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNu-mu-cHb">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="iXQ-Ts-YPp" customClass="LoginViewController" customModule="WHIX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Za2-rA-UWE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WHIX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0j-Ku-DV3">
@@ -61,7 +61,7 @@
             <objects>
                 <viewController id="VWz-Wy-8v5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRe-Kf-TBU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Lb-ak-oVC"/>
@@ -77,7 +77,7 @@
             <objects>
                 <viewController id="XWU-Io-aeP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nM-bl-LPP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pvn-gF-a6I"/>
@@ -91,14 +91,45 @@
         <!--Feed-->
         <scene sceneID="GQC-cf-Dqz">
             <objects>
-                <viewController id="MwJ-Wn-cAd" sceneMemberID="viewController">
+                <viewController id="MwJ-Wn-cAd" customClass="FeedViewController" customModule="WHIX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBp-N1-tye">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hOn-cr-SqB" customClass="GeminiCollectionView" customModule="Gemini">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gfs-ld-qp8" customClass="UICollectionViewPagingFlowLayout" customModule="WHIX" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayerCollectionViewCell" id="BRf-30-RLT" customClass="PlayerCollectionViewCell" customModule="WHIX" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hOn-cr-SqB" firstAttribute="leading" secondItem="g85-Nd-ftg" secondAttribute="leading" id="GCk-MH-rbU"/>
+                            <constraint firstItem="hOn-cr-SqB" firstAttribute="top" secondItem="g85-Nd-ftg" secondAttribute="top" id="LFu-hf-jlM"/>
+                            <constraint firstItem="g85-Nd-ftg" firstAttribute="trailing" secondItem="hOn-cr-SqB" secondAttribute="trailing" id="goO-J0-35t"/>
+                            <constraint firstItem="g85-Nd-ftg" firstAttribute="bottom" secondItem="hOn-cr-SqB" secondAttribute="bottom" id="m0N-ur-5Mv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g85-Nd-ftg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" id="Pww-WF-1eo"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hOn-cr-SqB" id="kbr-Di-tRM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boG-iU-t6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

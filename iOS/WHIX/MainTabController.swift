@@ -10,7 +10,7 @@ import UIKit
 
 class MainTabController: UITabBarController {
     
-    var loggedIn: Bool = false
+    var loggedIn: Bool = true
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
