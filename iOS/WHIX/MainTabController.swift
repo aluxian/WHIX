@@ -14,7 +14,6 @@ class MainTabController: UITabBarController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // Do any additional setup after loading the view, typically from a nib.
         
         if !loggedIn {
             loggedIn = true

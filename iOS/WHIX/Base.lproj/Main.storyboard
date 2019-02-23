@@ -56,50 +56,54 @@
             </objects>
             <point key="canvasLocation" x="-916" y="853"/>
         </scene>
-        <!--Me-->
+        <!--View Controller-->
         <scene sceneID="Ry4-GH-agG">
             <objects>
                 <viewController id="VWz-Wy-8v5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRe-Kf-TBU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Lb-ak-oVC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" id="qBR-cQ-oRQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="round_person_black_36pt" id="qBR-cQ-oRQ">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uS-pP-AB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="774" y="331"/>
         </scene>
-        <!--+-->
+        <!--View Controller-->
         <scene sceneID="JkH-Ca-Fcf">
             <objects>
                 <viewController id="XWU-Io-aeP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nM-bl-LPP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pvn-gF-a6I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="+" id="el1-LF-ISf"/>
+                    <tabBarItem key="tabBarItem" title="" image="round_add_black_36pt" id="el1-LF-ISf">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivm-FA-sdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-183" y="854"/>
         </scene>
-        <!--Feed-->
+        <!--Feed View Controller-->
         <scene sceneID="GQC-cf-Dqz">
             <objects>
                 <viewController id="MwJ-Wn-cAd" customClass="FeedViewController" customModule="WHIX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBp-N1-tye">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hOn-cr-SqB" customClass="GeminiCollectionView" customModule="Gemini">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hOn-cr-SqB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gfs-ld-qp8" customClass="UICollectionViewPagingFlowLayout" customModule="WHIX" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gfs-ld-qp8">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -107,43 +111,94 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayerCollectionViewCell" id="BRf-30-RLT" customClass="PlayerCollectionViewCell" customModule="WHIX" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="7" y="0.0" width="400" height="700"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsZ-fr-JxJ" customClass="PlayerView" customModule="WHIX" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic5-CV-Pkn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGv-R4-q5h" customClass="GradientOverlayView" customModule="WHIX" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="700"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@aluxian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svx-mn-kVP">
+                                                    <rect key="frame" x="10" y="579" width="372" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="ic5-CV-Pkn" firstAttribute="top" secondItem="BRf-30-RLT" secondAttribute="top" id="0fW-cQ-x21"/>
+                                            <constraint firstAttribute="trailing" secondItem="JsZ-fr-JxJ" secondAttribute="trailing" id="1hx-We-nEh"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZGv-R4-q5h" secondAttribute="bottom" id="2kf-Jz-I7D"/>
+                                            <constraint firstItem="JsZ-fr-JxJ" firstAttribute="top" secondItem="BRf-30-RLT" secondAttribute="top" id="2nD-3f-hvZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Svx-mn-kVP" secondAttribute="bottom" constant="100" id="5NQ-B3-Cye"/>
+                                            <constraint firstItem="ic5-CV-Pkn" firstAttribute="leading" secondItem="BRf-30-RLT" secondAttribute="leading" id="5OF-Ob-dZP"/>
+                                            <constraint firstAttribute="trailing" secondItem="ic5-CV-Pkn" secondAttribute="trailing" id="6Q9-8P-rK5"/>
+                                            <constraint firstItem="ZGv-R4-q5h" firstAttribute="top" secondItem="BRf-30-RLT" secondAttribute="top" id="6nF-nl-IA5"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZGv-R4-q5h" secondAttribute="trailing" id="86a-SE-Mm5"/>
+                                            <constraint firstAttribute="bottom" secondItem="JsZ-fr-JxJ" secondAttribute="bottom" id="dLT-kP-IE5"/>
+                                            <constraint firstItem="Svx-mn-kVP" firstAttribute="leading" secondItem="BRf-30-RLT" secondAttribute="leading" constant="10" id="gKi-dO-UFg"/>
+                                            <constraint firstItem="JsZ-fr-JxJ" firstAttribute="leading" secondItem="BRf-30-RLT" secondAttribute="leading" id="hr3-Fc-McB"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Svx-mn-kVP" secondAttribute="trailing" constant="10" id="qY8-FE-8Ta"/>
+                                            <constraint firstItem="ZGv-R4-q5h" firstAttribute="leading" secondItem="BRf-30-RLT" secondAttribute="leading" id="tek-IS-JB3"/>
+                                            <constraint firstAttribute="bottom" secondItem="ic5-CV-Pkn" secondAttribute="bottom" id="ugv-8o-BVn"/>
+                                        </constraints>
+                                        <size key="customSize" width="400" height="700"/>
+                                        <connections>
+                                            <outlet property="playerView" destination="JsZ-fr-JxJ" id="6qa-Y1-r0F"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="MwJ-Wn-cAd" id="gvw-Az-ekl"/>
+                                    <outlet property="delegate" destination="MwJ-Wn-cAd" id="aWs-A8-E2r"/>
+                                </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hOn-cr-SqB" firstAttribute="leading" secondItem="g85-Nd-ftg" secondAttribute="leading" id="GCk-MH-rbU"/>
-                            <constraint firstItem="hOn-cr-SqB" firstAttribute="top" secondItem="g85-Nd-ftg" secondAttribute="top" id="LFu-hf-jlM"/>
+                            <constraint firstItem="hOn-cr-SqB" firstAttribute="top" secondItem="NBp-N1-tye" secondAttribute="top" id="LFu-hf-jlM"/>
                             <constraint firstItem="g85-Nd-ftg" firstAttribute="trailing" secondItem="hOn-cr-SqB" secondAttribute="trailing" id="goO-J0-35t"/>
-                            <constraint firstItem="g85-Nd-ftg" firstAttribute="bottom" secondItem="hOn-cr-SqB" secondAttribute="bottom" id="m0N-ur-5Mv"/>
+                            <constraint firstAttribute="bottom" secondItem="hOn-cr-SqB" secondAttribute="bottom" id="m0N-ur-5Mv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g85-Nd-ftg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" id="Pww-WF-1eo"/>
+                    <tabBarItem key="tabBarItem" title="" image="round_home_black_36pt" id="Pww-WF-1eo">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="hOn-cr-SqB" id="kbr-Di-tRM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boG-iU-t6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="-332"/>
+            <point key="canvasLocation" x="773.91304347826087" y="-332.14285714285711"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="cQx-Fr-X1c">
             <objects>
                 <tabBarController id="hNu-mu-cHb" customClass="MainTabController" customModule="WHIX" customModuleProvider="target" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ZTi-rA-gC2">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ZTi-rA-gC2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectedImageTintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="MwJ-Wn-cAd" kind="relationship" relationship="viewControllers" id="zc5-Gu-Ti8"/>
@@ -157,4 +212,10 @@
             <point key="canvasLocation" x="-182" y="-1"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="round_add_black_36pt" width="72" height="72"/>
+        <image name="round_home_black_36pt" width="72" height="72"/>
+        <image name="round_person_black_36pt" width="72" height="72"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

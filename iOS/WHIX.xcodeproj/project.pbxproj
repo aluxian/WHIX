@@ -11,9 +11,8 @@
 		79A28C6822218D610072737A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79A28C6722218D610072737A /* GoogleService-Info.plist */; };
 		79A28C6A22219C440072737A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C6922219C440072737A /* FeedViewController.swift */; };
 		79A28C6E22219E200072737A /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C6D22219E200072737A /* PlayerView.swift */; };
-		79A28C712221A1BC0072737A /* PlayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A28C6F2221A1BC0072737A /* PlayerCollectionViewCell.xib */; };
 		79A28C722221A1BC0072737A /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C702221A1BC0072737A /* PlayerCollectionViewCell.swift */; };
-		79A28C742221A1D80072737A /* UICollectionViewPagingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C732221A1D80072737A /* UICollectionViewPagingFlowLayout.swift */; };
+		79A28C792221C8600072737A /* GradientOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C782221C8600072737A /* GradientOverlayView.swift */; };
 		79AF9600222182C000637D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF95FF222182C000637D5F /* AppDelegate.swift */; };
 		79AF9602222182C000637D5F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9601222182C000637D5F /* MainTabController.swift */; };
 		79AF9604222182C000637D5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9603222182C000637D5F /* LoginViewController.swift */; };
@@ -28,9 +27,8 @@
 		79A28C6722218D610072737A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79A28C6922219C440072737A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		79A28C6D22219E200072737A /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		79A28C6F2221A1BC0072737A /* PlayerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCollectionViewCell.xib; sourceTree = "<group>"; };
 		79A28C702221A1BC0072737A /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
-		79A28C732221A1D80072737A /* UICollectionViewPagingFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewPagingFlowLayout.swift; sourceTree = "<group>"; };
+		79A28C782221C8600072737A /* GradientOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientOverlayView.swift; sourceTree = "<group>"; };
 		79AF95FC222182C000637D5F /* WHIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF95FF222182C000637D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79AF9601222182C000637D5F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -78,16 +76,15 @@
 				79AF95FF222182C000637D5F /* AppDelegate.swift */,
 				79AF9601222182C000637D5F /* MainTabController.swift */,
 				79AF9603222182C000637D5F /* LoginViewController.swift */,
-				79AF9605222182C000637D5F /* Main.storyboard */,
-				79AF9608222182C200637D5F /* Assets.xcassets */,
-				79AF960A222182C200637D5F /* LaunchScreen.storyboard */,
-				79AF960D222182C200637D5F /* Info.plist */,
 				79A28C6922219C440072737A /* FeedViewController.swift */,
+				79AF9605222182C000637D5F /* Main.storyboard */,
+				79AF960A222182C200637D5F /* LaunchScreen.storyboard */,
+				79AF9608222182C200637D5F /* Assets.xcassets */,
+				79AF960D222182C200637D5F /* Info.plist */,
 				79A28C6722218D610072737A /* GoogleService-Info.plist */,
 				79A28C702221A1BC0072737A /* PlayerCollectionViewCell.swift */,
-				79A28C6F2221A1BC0072737A /* PlayerCollectionViewCell.xib */,
 				79A28C6D22219E200072737A /* PlayerView.swift */,
-				79A28C732221A1D80072737A /* UICollectionViewPagingFlowLayout.swift */,
+				79A28C782221C8600072737A /* GradientOverlayView.swift */,
 			);
 			path = WHIX;
 			sourceTree = "<group>";
@@ -169,7 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				79AF960C222182C200637D5F /* LaunchScreen.storyboard in Resources */,
-				79A28C712221A1BC0072737A /* PlayerCollectionViewCell.xib in Resources */,
 				79A28C6822218D610072737A /* GoogleService-Info.plist in Resources */,
 				79AF9609222182C200637D5F /* Assets.xcassets in Resources */,
 				79AF9607222182C000637D5F /* Main.storyboard in Resources */,
@@ -208,9 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A28C742221A1D80072737A /* UICollectionViewPagingFlowLayout.swift in Sources */,
 				79AF9604222182C000637D5F /* LoginViewController.swift in Sources */,
 				79AF9600222182C000637D5F /* AppDelegate.swift in Sources */,
+				79A28C792221C8600072737A /* GradientOverlayView.swift in Sources */,
 				79A28C6E22219E200072737A /* PlayerView.swift in Sources */,
 				79A28C6A22219C440072737A /* FeedViewController.swift in Sources */,
 				79AF9602222182C000637D5F /* MainTabController.swift in Sources */,

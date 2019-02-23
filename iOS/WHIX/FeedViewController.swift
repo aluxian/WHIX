@@ -7,81 +7,22 @@
 //
 
 import UIKit
-import Gemini
-
-enum Resource {
-    case image
-    case movie
-}
-
-extension Resource {
-    var images: [UIImage] {
-        return resourceNames.compactMap { UIImage(named: $0) }
-    }
-    
-    var urls: [URL] {
-        return resourceNames.compactMap(URL.init)
-    }
-    
-    private var resourceNames: [String] {
-        switch self {
-        case .image:
-            return ["building", "food", "japan", "minions", "nature", "people"]
-        case .movie:
-            return ["https://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-85.mp4",
-                    "https://yt-dash-mse-test.commondatastorage.googleapis.com/media/motion-20120802-85.mp4",
-                    "https://yt-dash-mse-test.commondatastorage.googleapis.com/media/oops-20120802-85.mp4"]
-        }
-    }
-}
 
 class FeedViewController: UIViewController, UICollectionViewDelegate {
     
-    // Inherite GeminiCollectionView
-    @IBOutlet weak var collectionView: GeminiCollectionView! {
-        didSet {
-            let nib = UINib(nibName: "PlayerCollectionViewCell", bundle: nil)
-            collectionView.register(nib, forCellWithReuseIdentifier: "PlayerCollectionViewCell")
-            collectionView.delegate   = self
-            collectionView.dataSource = self
-            collectionView.isPagingEnabled = true
-            
-            if #available(iOS 11.0, *) {
-                collectionView.contentInsetAdjustmentBehavior = .never
-            }
-            
-            collectionView.gemini
-                .cubeAnimation()
-                .shadowEffect(.fadeIn)
-        }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
-    var movieURLs: [URL] = Resource.movie.urls
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var movieURLs: [URL] = ["https://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-85.mp4",
+                            "https://yt-dash-mse-test.commondatastorage.googleapis.com/media/motion-20120802-85.mp4",
+                            "https://yt-dash-mse-test.commondatastorage.googleapis.com/media/oops-20120802-85.mp4"].compactMap(URL.init)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setting of UICollectionViewFlowLayout
-//        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-//            layout.scrollDirection = .horizontal
-//            collectionView.collectionViewLayout = layout
-//        }
-    }
-    
-}
-
-extension FeedViewController {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        collectionView.animateVisibleCells()
-        
-        // Pause movie during scrolling
-//        collectionView.visibleCells
-//            .compactMap { $0 as? PlayerCollectionViewCell }
-//            .forEach { $0.playerView.pause() }
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        (collectionView.visibleCells.first as? PlayerCollectionViewCell)?.playerView.play()
+        collectionView.backgroundColor = UIColor.black
     }
 }
 
