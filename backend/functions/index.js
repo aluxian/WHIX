@@ -1,12 +1,7 @@
 const functions = require('firebase-functions');
-const firebase = require("firebase");
 const md5 = require('md5');
 
-firebase.initializeApp({
-    apiKey: 'AIzaSyBeScpUiFwTzjy5v-O1CiFOVcrNi5ygFo8',
-    projectId: 'whix-com'
-});
-let db = firebase.firestore();
+let db = functions.firestore;
 
 
 // // Create and Deploy Your First Cloud Functions
@@ -69,7 +64,7 @@ exports.post = functions.https.onCall(async (data, context) => {
             date: new Date(),
             likes: [],
             likesCount: 0,
-            locationid: new firebase.firestore.GeoPoint(lat, lon),
+            locationid: new db.GeoPoint(lat, lon),
             userid: db.doc("/users/" + userId)
         });
 
