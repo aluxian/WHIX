@@ -1,0 +1,6 @@
+module Pods_WHIX {
+  umbrella header "Pods-WHIX-umbrella.h"
+
+  export *
+  module * { export * }
+}

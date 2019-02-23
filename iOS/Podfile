@@ -1,3 +1,4 @@
 target 'WHIX' do
   pod 'Firebase/Core'
+  pod "Gemini"
 end

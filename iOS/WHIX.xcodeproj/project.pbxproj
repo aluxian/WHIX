@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		45453A0DD04F95271C0E1999 /* libPods-WHIX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E225C3293E69EF0C761678A /* libPods-WHIX.a */; };
 		79A28C6822218D610072737A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79A28C6722218D610072737A /* GoogleService-Info.plist */; };
+		79A28C6A22219C440072737A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C6922219C440072737A /* FeedViewController.swift */; };
+		79A28C6C22219DEE0072737A /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C6B22219DEE0072737A /* FeedCell.swift */; };
+		79A28C6E22219E200072737A /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C6D22219E200072737A /* PlayerView.swift */; };
 		79AF9600222182C000637D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF95FF222182C000637D5F /* AppDelegate.swift */; };
 		79AF9602222182C000637D5F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9601222182C000637D5F /* MainTabController.swift */; };
 		79AF9604222182C000637D5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9603222182C000637D5F /* LoginViewController.swift */; };
@@ -21,6 +24,9 @@
 		3E225C3293E69EF0C761678A /* libPods-WHIX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WHIX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F50C79D0EDEA73C0A08F8E6 /* Pods-WHIX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHIX.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHIX/Pods-WHIX.release.xcconfig"; sourceTree = "<group>"; };
 		79A28C6722218D610072737A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79A28C6922219C440072737A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		79A28C6B22219DEE0072737A /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		79A28C6D22219E200072737A /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		79AF95FC222182C000637D5F /* WHIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF95FF222182C000637D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79AF9601222182C000637D5F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				79AF960A222182C200637D5F /* LaunchScreen.storyboard */,
 				79AF960D222182C200637D5F /* Info.plist */,
 				79A28C6722218D610072737A /* GoogleService-Info.plist */,
+				79A28C6922219C440072737A /* FeedViewController.swift */,
+				79A28C6B22219DEE0072737A /* FeedCell.swift */,
+				79A28C6D22219E200072737A /* PlayerView.swift */,
 			);
 			path = WHIX;
 			sourceTree = "<group>";
@@ -193,7 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79AF9604222182C000637D5F /* LoginViewController.swift in Sources */,
+				79A28C6C22219DEE0072737A /* FeedCell.swift in Sources */,
 				79AF9600222182C000637D5F /* AppDelegate.swift in Sources */,
+				79A28C6E22219E200072737A /* PlayerView.swift in Sources */,
+				79A28C6A22219C440072737A /* FeedViewController.swift in Sources */,
 				79AF9602222182C000637D5F /* MainTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
