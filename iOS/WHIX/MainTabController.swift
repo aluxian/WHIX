@@ -9,12 +9,19 @@
 import UIKit
 
 class MainTabController: UITabBarController {
+    
+    var loggedIn: Bool = false
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if !loggedIn {
+            loggedIn = true
+            print("showing login segue")
+            performSegue(withIdentifier: "showLogin", sender: nil)
+        }
     }
-
 
 }
 

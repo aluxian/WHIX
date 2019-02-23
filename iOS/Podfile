@@ -1,0 +1,3 @@
+target 'WHIX' do
+  pod 'Firebase/Core'
+end

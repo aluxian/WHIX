@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45453A0DD04F95271C0E1999 /* libPods-WHIX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E225C3293E69EF0C761678A /* libPods-WHIX.a */; };
+		79A28C6822218D610072737A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79A28C6722218D610072737A /* GoogleService-Info.plist */; };
 		79AF9600222182C000637D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF95FF222182C000637D5F /* AppDelegate.swift */; };
-		79AF9602222182C000637D5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9601222182C000637D5F /* FirstViewController.swift */; };
-		79AF9604222182C000637D5F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9603222182C000637D5F /* SecondViewController.swift */; };
+		79AF9602222182C000637D5F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9601222182C000637D5F /* MainTabController.swift */; };
+		79AF9604222182C000637D5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9603222182C000637D5F /* LoginViewController.swift */; };
 		79AF9607222182C000637D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF9605222182C000637D5F /* Main.storyboard */; };
 		79AF9609222182C200637D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AF9608222182C200637D5F /* Assets.xcassets */; };
 		79AF960C222182C200637D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF960A222182C200637D5F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E225C3293E69EF0C761678A /* libPods-WHIX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WHIX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F50C79D0EDEA73C0A08F8E6 /* Pods-WHIX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHIX.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHIX/Pods-WHIX.release.xcconfig"; sourceTree = "<group>"; };
+		79A28C6722218D610072737A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79AF95FC222182C000637D5F /* WHIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF95FF222182C000637D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79AF9601222182C000637D5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		79AF9603222182C000637D5F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		79AF9601222182C000637D5F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		79AF9603222182C000637D5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		79AF9606222182C000637D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79AF9608222182C200637D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79AF960B222182C200637D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79AF960D222182C200637D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA0D234CB06F989C1E5BF38 /* Pods-WHIX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHIX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHIX/Pods-WHIX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45453A0DD04F95271C0E1999 /* libPods-WHIX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				79AF95FE222182C000637D5F /* WHIX */,
 				79AF95FD222182C000637D5F /* Products */,
+				E51E6A7CFDADA6936847CD79 /* Pods */,
+				9C9348EFBF8BE45F9FA8022E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +66,32 @@
 			isa = PBXGroup;
 			children = (
 				79AF95FF222182C000637D5F /* AppDelegate.swift */,
-				79AF9601222182C000637D5F /* FirstViewController.swift */,
-				79AF9603222182C000637D5F /* SecondViewController.swift */,
+				79AF9601222182C000637D5F /* MainTabController.swift */,
+				79AF9603222182C000637D5F /* LoginViewController.swift */,
 				79AF9605222182C000637D5F /* Main.storyboard */,
 				79AF9608222182C200637D5F /* Assets.xcassets */,
 				79AF960A222182C200637D5F /* LaunchScreen.storyboard */,
 				79AF960D222182C200637D5F /* Info.plist */,
+				79A28C6722218D610072737A /* GoogleService-Info.plist */,
 			);
 			path = WHIX;
+			sourceTree = "<group>";
+		};
+		9C9348EFBF8BE45F9FA8022E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E225C3293E69EF0C761678A /* libPods-WHIX.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E51E6A7CFDADA6936847CD79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0D234CB06F989C1E5BF38 /* Pods-WHIX.debug.xcconfig */,
+				3F50C79D0EDEA73C0A08F8E6 /* Pods-WHIX.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +101,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79AF9610222182C200637D5F /* Build configuration list for PBXNativeTarget "WHIX" */;
 			buildPhases = (
+				C0C03AC1DC9E830831EC5CA3 /* [CP] Check Pods Manifest.lock */,
 				79AF95F8222182C000637D5F /* Sources */,
 				79AF95F9222182C000637D5F /* Frameworks */,
 				79AF95FA222182C000637D5F /* Resources */,
@@ -126,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79AF960C222182C200637D5F /* LaunchScreen.storyboard in Resources */,
+				79A28C6822218D610072737A /* GoogleService-Info.plist in Resources */,
 				79AF9609222182C200637D5F /* Assets.xcassets in Resources */,
 				79AF9607222182C000637D5F /* Main.storyboard in Resources */,
 			);
@@ -133,14 +162,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C0C03AC1DC9E830831EC5CA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHIX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79AF95F8222182C000637D5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79AF9604222182C000637D5F /* SecondViewController.swift in Sources */,
+				79AF9604222182C000637D5F /* LoginViewController.swift in Sources */,
 				79AF9600222182C000637D5F /* AppDelegate.swift in Sources */,
-				79AF9602222182C000637D5F /* FirstViewController.swift in Sources */,
+				79AF9602222182C000637D5F /* MainTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +338,7 @@
 		};
 		79AF9611222182C200637D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFA0D234CB06F989C1E5BF38 /* Pods-WHIX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +357,7 @@
 		};
 		79AF9612222182C200637D5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F50C79D0EDEA73C0A08F8E6 /* Pods-WHIX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
