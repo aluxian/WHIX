@@ -51,10 +51,34 @@ exports.login = functions.https.onCall(async (data, context) => {
     }
 });
 
-function post(contentLink, username, lat, lon) {
-    // create new doc in Posts
-    //return postId; // or null if failed
-}
+exports.post = functions.https.onCall(async (data, context) => {
+    const { contenturl, username, lat, lon } = data;
+    let post = db.collection("post");
+    let users = db.collection("users");
+
+    try {
+        const querySnapshot = await users.where("username", "==", username)
+            .get();
+        let userId = null;
+        querySnapshot.forEach(function(doc){
+            userId = doc.id;
+        });
+
+        const doc = await post.add({
+            content: contenturl,
+            date: new Date(),
+            likes: [],
+            likesCount: 0,
+            locationid: new firebase.firestore.GeoPoint(lat, lon),
+            userid: userId
+        });
+
+        return doc.id;
+    } catch(er) {
+        console.error(er);
+        return null;
+    }
+});
 
 function like(usernameLiker, postId) {
     //return newCount;
