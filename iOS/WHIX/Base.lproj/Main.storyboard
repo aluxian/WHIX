@@ -75,7 +75,6 @@
         <!--+-->
         <scene sceneID="JkH-Ca-Fcf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ivm-FA-sdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="XWU-Io-aeP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nM-bl-LPP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -85,6 +84,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="+" id="el1-LF-ISf"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivm-FA-sdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-183" y="854"/>
         </scene>
