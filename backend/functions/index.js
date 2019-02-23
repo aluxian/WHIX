@@ -70,7 +70,7 @@ exports.post = functions.https.onCall(async (data, context) => {
             likes: [],
             likesCount: 0,
             locationid: new firebase.firestore.GeoPoint(lat, lon),
-            userid: userId
+            userid: db.doc("/users/" + userId)
         });
 
         return doc.id;
@@ -80,10 +80,47 @@ exports.post = functions.https.onCall(async (data, context) => {
     }
 });
 
-function like(usernameLiker, postId) {
-    //return newCount;
+async function toggleLike(data, like) {
+    const { username, postId } = data;
+    let post = db.collection("post");
+    let users = db.collection("users");
+
+    try {
+        const querySnapshot = await users.where("username", "==", username)
+            .get();
+        let userId = null;
+        querySnapshot.forEach(function(doc){
+            userId = doc.id;
+        });
+
+        const postDoc = await post.doc(postId).get();
+        let likesCount = postDoc.data().likesCount;
+        let likes = postDoc.data().likes;
+
+        if(like) {
+            likes.push(db.doc("/users/" + userId));
+            likesCount += 1;
+        } else {
+            likes.splice(likes.indexOf(db.doc("/users/" + userId)), 1);
+            likesCount -= 1;
+        }
+
+        await post.doc(postId).update({
+            likes: likes,
+            likesCount: likesCount,
+        });
+
+        return likesCount;
+    } catch(er) {
+        console.error(er);
+        return null;
+    }
 }
 
-function unlike(usernameLiker, postId) {
-    //return newCount;
-}
+exports.like = functions.https.onCall(async (data, context) => {
+   return await toggleLike(data, true);
+});
+
+exports.unlike = functions.https.onCall(async (data, context) => {
+    return await toggleLike(data, false);
+});
