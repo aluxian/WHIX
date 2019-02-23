@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">campusHack19</string>
+    <string name="gravatar_disclaimer">We\'ll use your e-mail to grab your gravatar</string>
+    <string name="title_activity_feed">Feed</string>
+    <string name="title_activity_feeder">Feeder</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

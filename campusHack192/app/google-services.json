@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "67614535317",
+    "firebase_url": "https://whix-com.firebaseio.com",
+    "project_id": "whix-com",
+    "storage_bucket": "whix-com.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67614535317:android:54c65dadadd717a1",
+        "android_client_info": {
+          "package_name": "com.example.jacob.campushack19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67614535317-jvst2oeblv59m3a2n18lg9kogd5q1q7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsOq3a6-Ur3ktEGnp86oZFDsZRz67hoXU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
