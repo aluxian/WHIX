@@ -35,13 +35,32 @@ final class PlayerView: UIView {
     func setVideoURL(_ url: URL) {
         let playerItem = AVPlayerItem(asset: AVURLAsset(url: url))
         playerLayer.player = AVPlayer(playerItem: playerItem)
+        
+        // Register as an observer of the player item's status property
+        var observer: NSKeyValueObservation? = nil
+        
+        print("setting status listener")
+        observer = playerItem.observe(\.status, options:  [.new, .old], changeHandler: { (playerItem, change) in
+            print("got player item status \(playerItem.status.rawValue)")
+            print(playerItem.error)
+            if playerItem.status == .readyToPlay {
+                print("ready")
+                self.playerLayer.player!.play()
+                observer?.invalidate()
+            }
+        })
     }
     
+//    func clearVideo() {
+//        playerLayer.player = nil
+//    }
+    
     func play() {
-        player?.play()
+        player!.play()
     }
     
     func pause() {
         player?.pause()
     }
+
 }

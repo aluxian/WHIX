@@ -1,1 +1,0 @@
-../../../FirebaseUI/FirebaseAuthUI/FUIAuthBaseViewController_Internal.h

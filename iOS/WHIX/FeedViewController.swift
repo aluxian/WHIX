@@ -24,11 +24,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.black
         
-        db.collection("post").addSnapshotListener { (querySnapshot, err) in
+        db.collection("post").order(by: "date").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 self.docs = querySnapshot!.documents
+                print("new data!")
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -45,11 +46,7 @@ extension FeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (docs.count > 1) {
-            return 100000
-        } else {
-            return 0
-        }
+        return docs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
