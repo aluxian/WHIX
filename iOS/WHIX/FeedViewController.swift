@@ -52,9 +52,20 @@ extension FeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("creating cell \(indexPath.row)")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCollectionViewCell", for: indexPath) as! PlayerCollectionViewCell
         cell.configure(with: docs[indexPath.row % docs.count])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("will display \(indexPath.row) play")
+        (cell as! PlayerCollectionViewCell).playerView.play()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("did display \(indexPath.row) pause")
+        (cell as! PlayerCollectionViewCell).playerView.pause()
     }
 }
 

@@ -29,6 +29,8 @@ class PlayerCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.image = nil
         playerView.alpha = 0
+        playerView.pause()
+        playerView.clearVideo()
         
         usernameLabel.text = ""
         timestampLabel.text = ""

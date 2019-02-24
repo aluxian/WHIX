@@ -37,12 +37,12 @@ final class PlayerView: UIView {
         playerLayer.player = AVPlayer(playerItem: playerItem)
     }
     
-//    func clearVideo() {
-//        playerLayer.player = nil
-//    }
+    func clearVideo() {
+        playerLayer.player = nil
+    }
     
     func play() {
-        player!.play()
+        player?.play()
     }
     
     func pause() {
