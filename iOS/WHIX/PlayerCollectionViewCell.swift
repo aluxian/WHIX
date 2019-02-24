@@ -72,7 +72,7 @@ class PlayerCollectionViewCell: UICollectionViewCell {
                 print("retrieved mp4 url \(retrievedData != nil)")
                 self.playerView.alpha = 1
                 self.playerView.setVideoURL(getAVAsset(retrievedData))
-                self.playerView.play()
+//                self.playerView.play()
                 
                 NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.playerView.player!.currentItem, queue: .main) { [weak self] _ in
                     self?.playerView.player!.seek(to: CMTime.zero)
@@ -102,7 +102,7 @@ class PlayerCollectionViewCell: UICollectionViewCell {
                 if contentUrl.contains(".mp4") {
                     self.playerView.alpha = 1
                     self.playerView.setVideoURL(self.getAVAsset(data!))
-                    self.playerView.play()
+//                    self.playerView.play()
                     
                     NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.playerView.player!.currentItem, queue: .main) { [weak self] _ in
                         self?.playerView.player!.seek(to: CMTime.zero)

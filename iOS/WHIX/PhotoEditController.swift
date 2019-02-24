@@ -29,11 +29,12 @@ class PhotoEditController: UIViewController {
     var videoUrl: URL!
     
     @IBAction func nextBtnClicked(_ sender: Any) {
+        nextBtn.isEnabled = false
         (UIApplication.shared.delegate as! AppDelegate).editFinished = true
         
         progressView.alpha = 0.8
         progressView.progress = 0
-        progressView.layer.cornerRadius = 10
+        progressView.layer.cornerRadius = progressView.frame.height / 2
         progressView.clipsToBounds = true
         
         var imgRef: StorageReference! = nil

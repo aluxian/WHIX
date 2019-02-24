@@ -417,6 +417,7 @@ In</string>
                                 <connections>
                                     <outlet property="dataSource" destination="MwJ-Wn-cAd" id="gvw-Az-ekl"/>
                                     <outlet property="delegate" destination="MwJ-Wn-cAd" id="aWs-A8-E2r"/>
+                                    <outlet property="prefetchDataSource" destination="MwJ-Wn-cAd" id="9Lm-Sc-tKo"/>
                                 </connections>
                             </collectionView>
                         </subviews>
