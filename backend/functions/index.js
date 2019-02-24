@@ -58,24 +58,24 @@ exports.post = functions.region('europe-west1').https.onCall(async (data, contex
         const querySnapshot = await users.where("username", "==", username)
             .get();
         let userId = null;
-querySnapshot.forEach(function(doc){
-    userId = doc.id;
-});
+        querySnapshot.forEach(function(doc){
+            userId = doc.id;
+        });
 
-const doc = await post.add({
-    content: contenturl,
-    date: new Date(),
-    likes: [],
-    likesCount: 0,
-    locationid: new firebase.firestore.GeoPoint(lat, lon),
-    userid: db.doc("/users/" + userId)
-});
+    const doc = await post.add({
+        content: contenturl,
+        date: new Date(),
+        likes: [],
+        likesCount: 0,
+        locationid: new firebase.firestore.GeoPoint(lat, lon),
+        userid: db.doc("/users/" + userId)
+    });
 
-return doc.id;
-} catch(er) {
-    console.error(er);
-    return null;
-}
+    return doc.id;
+    } catch(er) {
+      console.error(er);
+      return null;
+    }
 });
 
 async function toggleLike(data, like) {
@@ -127,7 +127,6 @@ exports.unlike = functions.region('europe-west1').https.onCall(async (data, cont
 exports.unpost = functions.region('europe-west1').https.onCall(async (data, context) => {
     const {postid} = data;
     let post = db.collection("post");
-
     try {
         let docRef = post.doc(postid);
         docRef.get().then(async function (doc) {
