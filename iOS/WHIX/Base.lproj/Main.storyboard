@@ -368,6 +368,18 @@ In</string>
                                                         <constraint firstAttribute="width" constant="60" id="PW9-Fj-xyu"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8G-A3-mB0">
+                                                    <rect key="frame" x="340" y="582" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="hek-bY-ibA"/>
+                                                        <constraint firstAttribute="width" constant="40" id="t3l-YM-GOZ"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="round_keyboard_arrow_down_black_36pt"/>
+                                                    <connections>
+                                                        <action selector="scrollLatestClicked:" destination="MwJ-Wn-cAd" eventType="touchUpInside" id="hDf-89-XN7"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@aluxian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svx-mn-kVP">
                                                     <rect key="frame" x="80" y="549" width="310" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -386,6 +398,7 @@ In</string>
                                             <constraint firstAttribute="trailing" secondItem="JsZ-fr-JxJ" secondAttribute="trailing" id="1hx-We-nEh"/>
                                             <constraint firstAttribute="bottom" secondItem="ZGv-R4-q5h" secondAttribute="bottom" id="2kf-Jz-I7D"/>
                                             <constraint firstItem="JsZ-fr-JxJ" firstAttribute="top" secondItem="BRf-30-RLT" secondAttribute="top" id="2nD-3f-hvZ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="J8G-A3-mB0" secondAttribute="bottom" constant="70" id="4Gc-nU-pvE"/>
                                             <constraint firstAttribute="bottom" secondItem="Svx-mn-kVP" secondAttribute="bottom" constant="130" id="5NQ-B3-Cye"/>
                                             <constraint firstItem="ZGv-R4-q5h" firstAttribute="top" secondItem="BRf-30-RLT" secondAttribute="top" id="6nF-nl-IA5"/>
                                             <constraint firstAttribute="trailing" secondItem="ZGv-R4-q5h" secondAttribute="trailing" id="86a-SE-Mm5"/>
@@ -394,6 +407,7 @@ In</string>
                                             <constraint firstAttribute="trailing" secondItem="4gu-cJ-6QS" secondAttribute="trailing" constant="10" id="NdV-ZY-8cf"/>
                                             <constraint firstItem="4gu-cJ-6QS" firstAttribute="leading" secondItem="BRf-30-RLT" secondAttribute="leading" constant="80" id="a3V-TP-KGu"/>
                                             <constraint firstAttribute="bottom" secondItem="JsZ-fr-JxJ" secondAttribute="bottom" id="dLT-kP-IE5"/>
+                                            <constraint firstAttribute="trailing" secondItem="J8G-A3-mB0" secondAttribute="trailing" constant="20" id="eyn-mX-7wK"/>
                                             <constraint firstItem="2G6-ap-tFU" firstAttribute="top" secondItem="BRf-30-RLT" secondAttribute="top" id="fMc-f9-W5m"/>
                                             <constraint firstAttribute="bottom" secondItem="gIT-Te-Prs" secondAttribute="bottom" constant="98" id="fwm-5V-xur"/>
                                             <constraint firstItem="Svx-mn-kVP" firstAttribute="leading" secondItem="BRf-30-RLT" secondAttribute="leading" constant="80" id="gKi-dO-UFg"/>
@@ -477,6 +491,7 @@ In</string>
         <image name="round_arrow_back_ios_black_36pt" width="72" height="72"/>
         <image name="round_close_black_36pt" width="72" height="72"/>
         <image name="round_home_black_36pt" width="72" height="72"/>
+        <image name="round_keyboard_arrow_down_black_36pt" width="72" height="72"/>
         <image name="round_navigate_next_black_36pt" width="72" height="72"/>
         <image name="round_person_black_36pt" width="72" height="72"/>
     </resources>

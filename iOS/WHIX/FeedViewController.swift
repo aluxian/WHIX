@@ -16,6 +16,10 @@ class FeedViewController: UIViewController, UICollectionViewDelegate {
         return .lightContent
     }
     
+    @IBAction func scrollLatestClicked(_ sender: Any) {
+        collectionView.scrollToItem(at: IndexPath(row: docs.count - 1, section: 0), at: .top, animated: true)
+    }
+    
     lazy var db = Firestore.firestore()
     lazy var storage = Storage.storage()
     var docs: [QueryDocumentSnapshot] = []

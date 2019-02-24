@@ -125,7 +125,7 @@ extension CamViewController: SwiftyCamViewControllerDelegate {
         photoEditor.photoEditorDelegate = self
         photoEditor.image = photo
 
-        for i in 0...10 {
+        for i in 0...123 {
             photoEditor.stickers.append(UIImage(named: i.description )!)
         }
 
