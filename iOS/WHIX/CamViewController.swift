@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyCam
-import iOSPhotoEditor
 
 class CamViewController: SwiftyCamViewController, PhotoEditorDelegate {
     

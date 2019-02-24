@@ -6,7 +6,6 @@ target 'WHIX' do
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
   pod "SwiftyCam"
-  pod 'iOSPhotoEditor'
   pod 'Disk'
   pod 'SDWebImage'
 end
