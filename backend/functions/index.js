@@ -33,7 +33,7 @@ exports.login = functions.region('europe-west1').https.onCall(async (data, conte
             if(emailQuerySnapshot.size === 0 && usernameQuerySnapshot.size === 0) {
                 const doc = await users.add({
                     email: email,
-                    gravatar: "https://www.gravatar.com/avatar/" + md5(email),
+                    gravatar: "https://www.gravatar.com/avatar/" + md5(email) + ".jpg?d=retro",
                     username: username
                 });
 
