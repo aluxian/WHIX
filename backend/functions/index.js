@@ -122,3 +122,25 @@ exports.like = functions.region('europe-west1').https.onCall(async (data, contex
 exports.unlike = functions.region('europe-west1').https.onCall(async (data, context) => {
     return await toggleLike(data, false);
 });
+
+
+exports.unpost = functions.region('europe-west1').https.onCall(async (data, context) => {
+    const {postid} = data;
+    let post = db.collection("post");
+    try {
+        let docRef = post.doc(postid);
+        docRef.get().then(async function (doc) {
+            if(doc.exists) {
+                await docRef.delete();
+                console.log("Document deleted");
+            }
+            else {
+                console.log("No such document to delete");
+            }
+        })
+        return docRef.id;
+    } catch(er) {
+        console.error(er);
+        return null;
+    }
+});
