@@ -8,18 +8,25 @@
 
 import UIKit
 
-class MainTabController: UITabBarController {
+class MainTabController: UITabBarController, UITabBarControllerDelegate {
     
-    var loggedIn: Bool = true
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.delegate = self
         
-        if !loggedIn {
-            loggedIn = true
-            print("showing login segue")
+        if UserDefaults.standard.string(forKey: "loggedInUserId") == nil {
+            print("not logged in, showing login segue")
             performSegue(withIdentifier: "showLogin", sender: nil)
         }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController.title == "NEW" {
+            performSegue(withIdentifier: "showCamView", sender: nil)
+            return false
+        }
+        
+        return true
     }
 
 }

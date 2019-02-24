@@ -13,12 +13,16 @@
 		79A28C6E22219E200072737A /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C6D22219E200072737A /* PlayerView.swift */; };
 		79A28C722221A1BC0072737A /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C702221A1BC0072737A /* PlayerCollectionViewCell.swift */; };
 		79A28C792221C8600072737A /* GradientOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A28C782221C8600072737A /* GradientOverlayView.swift */; };
+		79A5F31C222225A8001FBF64 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A5F31B222225A8001FBF64 /* ProfileController.swift */; };
 		79AF9600222182C000637D5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF95FF222182C000637D5F /* AppDelegate.swift */; };
 		79AF9602222182C000637D5F /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9601222182C000637D5F /* MainTabController.swift */; };
 		79AF9604222182C000637D5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF9603222182C000637D5F /* LoginViewController.swift */; };
 		79AF9607222182C000637D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF9605222182C000637D5F /* Main.storyboard */; };
 		79AF9609222182C200637D5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AF9608222182C200637D5F /* Assets.xcassets */; };
 		79AF960C222182C200637D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF960A222182C200637D5F /* LaunchScreen.storyboard */; };
+		79D002C02221E4C50011F4EF /* CamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D002BF2221E4C50011F4EF /* CamViewController.swift */; };
+		79D002C42221E93E0011F4EF /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D002C32221E93E0011F4EF /* SwiftyRecordButton.swift */; };
+		79D002C82221FADF0011F4EF /* PhotoEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D002C72221FADF0011F4EF /* PhotoEditController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,7 @@
 		79A28C6D22219E200072737A /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		79A28C702221A1BC0072737A /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		79A28C782221C8600072737A /* GradientOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientOverlayView.swift; sourceTree = "<group>"; };
+		79A5F31B222225A8001FBF64 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		79AF95FC222182C000637D5F /* WHIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF95FF222182C000637D5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79AF9601222182C000637D5F /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -37,6 +42,9 @@
 		79AF9608222182C200637D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79AF960B222182C200637D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79AF960D222182C200637D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79D002BF2221E4C50011F4EF /* CamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamViewController.swift; sourceTree = "<group>"; };
+		79D002C32221E93E0011F4EF /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		79D002C72221FADF0011F4EF /* PhotoEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditController.swift; sourceTree = "<group>"; };
 		BFA0D234CB06F989C1E5BF38 /* Pods-WHIX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHIX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHIX/Pods-WHIX.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,10 @@
 				79A28C702221A1BC0072737A /* PlayerCollectionViewCell.swift */,
 				79A28C6D22219E200072737A /* PlayerView.swift */,
 				79A28C782221C8600072737A /* GradientOverlayView.swift */,
+				79D002C32221E93E0011F4EF /* SwiftyRecordButton.swift */,
+				79D002BF2221E4C50011F4EF /* CamViewController.swift */,
+				79D002C72221FADF0011F4EF /* PhotoEditController.swift */,
+				79A5F31B222225A8001FBF64 /* ProfileController.swift */,
 			);
 			path = WHIX;
 			sourceTree = "<group>";
@@ -117,6 +129,8 @@
 				79AF95F8222182C000637D5F /* Sources */,
 				79AF95F9222182C000637D5F /* Frameworks */,
 				79AF95FA222182C000637D5F /* Resources */,
+				5CDA3B03843BCA75472673A7 /* [CP] Copy Pods Resources */,
+				CC2A8CDB7BD6C4B48657F1C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +189,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5CDA3B03843BCA75472673A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WHIX/Pods-WHIX-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates.bundle",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/Base.lproj/LaunchScreen.storyboard",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/ColorCollectionViewCell.xib",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/EmojiCollectionViewCell.xib",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/icomoon.ttf",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/LaunchScreen.storyboard",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/PhotoCropEditorBorder.png",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/PhotoCropEditorBorder@2x.png",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/PhotoCropEditorBorder@3x.png",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/PhotoEditorViewController.xib",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/StickerCollectionViewCell.xib",
+				"${PODS_ROOT}/iOSPhotoEditor/Photo Editor/Photo Editor/StickersViewController.xib",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LaunchScreen.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ColorCollectionViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EmojiCollectionViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icomoon.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PhotoCropEditorBorder.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PhotoCropEditorBorder@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PhotoCropEditorBorder@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PhotoEditorViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StickerCollectionViewCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StickersViewController.nib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WHIX/Pods-WHIX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C0C03AC1DC9E830831EC5CA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +272,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CC2A8CDB7BD6C4B48657F1C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WHIX/Pods-WHIX-frameworks.sh",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WHIX/Pods-WHIX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -204,10 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D002C42221E93E0011F4EF /* SwiftyRecordButton.swift in Sources */,
 				79AF9604222182C000637D5F /* LoginViewController.swift in Sources */,
 				79AF9600222182C000637D5F /* AppDelegate.swift in Sources */,
+				79D002C02221E4C50011F4EF /* CamViewController.swift in Sources */,
+				79D002C82221FADF0011F4EF /* PhotoEditController.swift in Sources */,
 				79A28C792221C8600072737A /* GradientOverlayView.swift in Sources */,
 				79A28C6E22219E200072737A /* PlayerView.swift in Sources */,
+				79A5F31C222225A8001FBF64 /* ProfileController.swift in Sources */,
 				79A28C6A22219C440072737A /* FeedViewController.swift in Sources */,
 				79AF9602222182C000637D5F /* MainTabController.swift in Sources */,
 				79A28C722221A1BC0072737A /* PlayerCollectionViewCell.swift in Sources */,

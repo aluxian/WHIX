@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedViewController: UIViewController, UICollectionViewDelegate {
     
@@ -14,15 +15,26 @@ class FeedViewController: UIViewController, UICollectionViewDelegate {
         return .lightContent
     }
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    lazy var db = Firestore.firestore()
+    var docs: [QueryDocumentSnapshot] = []
     
-    var movieURLs: [URL] = ["https://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-85.mp4",
-                            "https://yt-dash-mse-test.commondatastorage.googleapis.com/media/motion-20120802-85.mp4",
-                            "https://yt-dash-mse-test.commondatastorage.googleapis.com/media/oops-20120802-85.mp4"].compactMap(URL.init)
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.black
+        
+        db.collection("post").addSnapshotListener { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.docs = querySnapshot!.documents
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+
     }
 }
 
@@ -33,12 +45,16 @@ extension FeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieURLs.count
+        if (docs.count > 1) {
+            return 100000
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayerCollectionViewCell", for: indexPath) as! PlayerCollectionViewCell
-        cell.configure(with: movieURLs[indexPath.row])
+        cell.configure(with: docs[indexPath.row % docs.count])
         return cell
     }
 }

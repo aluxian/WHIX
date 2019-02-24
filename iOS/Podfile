@@ -1,3 +1,10 @@
 target 'WHIX' do
   pod 'Firebase/Core'
+  pod 'Firebase/Functions'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseUI', '~> 5.0'
+  pod "SwiftyCam"
+  pod 'iOSPhotoEditor'
+  pod 'Disk'
 end
