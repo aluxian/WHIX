@@ -78,15 +78,17 @@ extension FeedViewController: UITableViewDataSourcePrefetching {
             let contentUrl = doc.data()["content"] as! String
             let gsReference = storage.reference(forURL: contentUrl)
             
-            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            gsReference.getData(maxSize: 15 * 1024 * 1024) { data, error in
-                if let error = error {
-                    print(error)
-                } else {
-                    do {
-                        try Disk.save(data!, to: .caches, as: gsReference.fullPath)
-                    } catch let error {
+            if !Disk.exists(gsReference.fullPath, in: .caches) {
+                // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+                gsReference.getData(maxSize: 15 * 1024 * 1024) { data, error in
+                    if let error = error {
                         print(error)
+                    } else {
+                        do {
+                            try Disk.save(data!, to: .caches, as: gsReference.fullPath)
+                        } catch let error {
+                            print(error)
+                        }
                     }
                 }
             }

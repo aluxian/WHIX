@@ -17,7 +17,10 @@ class CamViewController: SwiftyCamViewController, PhotoEditorDelegate {
     }
     
     func doneEditing(image: UIImage) {
-        
+        print("done editing!!!!!!!!!!!!!!!!!!!!!!!")
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "showEditScreen", sender: image)
+        }
     }
     
     func canceledEditing() {
@@ -88,6 +91,7 @@ class CamViewController: SwiftyCamViewController, PhotoEditorDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing for segue \(segue.identifier)")
         if segue.identifier == "showEditScreen" {
             let vc = segue.destination as! PhotoEditController
             if let sender = sender as? UIImage {
@@ -118,27 +122,15 @@ extension CamViewController: SwiftyCamViewControllerDelegate {
 //        (UIApplication.shared.delegate as! AppDelegate).takenImage = photo
 //        dismiss(animated: false, completion: nil)
         
-        performSegue(withIdentifier: "showEditScreen", sender: photo)
-        
-//        let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController", bundle: Bundle(for: PhotoEditorViewController.self))
-//
-//        //PhotoEditorDelegate
-//        photoEditor.photoEditorDelegate = self
-//
-//        //The image to be edited
-//        photoEditor.image = photo
-//
-//        //Stickers that the user will choose from to add on the image
-//        photoEditor.stickers.append(UIImage(named: "flash" )!)
-//
-//        //Optional: To hide controls - array of enum control
-//        photoEditor.hiddenControls = [.crop, .draw, .share]
-//
-//        //Optional: Colors for drawing and Text, If not set default values will be used
-////        photoEditor.colors = [.red,.blue,.green]
-//
-//        //Present the View Controller
-//        present(photoEditor, animated: true, completion: nil)
+        let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController", bundle: Bundle(for: PhotoEditorViewController.self))
+        photoEditor.photoEditorDelegate = self
+        photoEditor.image = photo
+
+        for i in 0...10 {
+            photoEditor.stickers.append(UIImage(named: i.description )!)
+        }
+
+        present(photoEditor, animated: true, completion: nil)
     }
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didBeginRecordingVideo camera: SwiftyCamViewController.CameraSelection) {
