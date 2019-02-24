@@ -1,6 +1,0 @@
-module iOSPhotoEditor {
-  umbrella header "iOSPhotoEditor-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -50,7 +50,7 @@ class CamViewController: SwiftyCamViewController, PhotoEditorDelegate {
         videoGravity = .resizeAspectFill
         cameraDelegate = self
         maximumVideoDuration = 10.0
-        shouldUseDeviceOrientation = true
+        shouldUseDeviceOrientation = false
         allowAutoRotate = false
         audioEnabled = true
         flashMode = .auto
@@ -79,10 +79,24 @@ class CamViewController: SwiftyCamViewController, PhotoEditorDelegate {
         flashButton.setImage(#imageLiteral(resourceName: "flashauto"), for: UIControl.State())
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (UIApplication.shared.delegate as! AppDelegate).editFinished {
+            (UIApplication.shared.delegate as! AppDelegate).editFinished = false
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEditScreen" {
             let vc = segue.destination as! PhotoEditController
-            vc.image = (sender as! UIImage)
+            if let sender = sender as? UIImage {
+                vc.image = (sender as! UIImage)
+            } else if let sender = sender as? URL {
+                vc.videoUrl = (sender as! URL)
+            } else {
+                print("sender not recognised")
+            }
         }
     }
 
@@ -143,6 +157,7 @@ extension CamViewController: SwiftyCamViewControllerDelegate {
 //        let newVC = VideoViewController(videoURL: url)
 //        self.present(newVC, animated: true, completion: nil)
         // TODO
+        performSegue(withIdentifier: "showEditScreen", sender: url)
     }
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint) {

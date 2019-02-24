@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Disk
 
 class FeedViewController: UIViewController, UICollectionViewDelegate {
     
@@ -16,6 +17,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate {
     }
     
     lazy var db = Firestore.firestore()
+    lazy var storage = Storage.storage()
     var docs: [QueryDocumentSnapshot] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,11 +26,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.black
         
-        db.collection("post").addSnapshotListener { (querySnapshot, err) in
+        db.collection("post").order(by: "date").addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 self.docs = querySnapshot!.documents
+                print("new data!")
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -45,11 +48,7 @@ extension FeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (docs.count > 1) {
-            return 100000
-        } else {
-            return 0
-        }
+        return docs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,6 +56,32 @@ extension FeedViewController: UICollectionViewDataSource {
         cell.configure(with: docs[indexPath.row % docs.count])
         return cell
     }
+}
+
+extension FeedViewController: UITableViewDataSourcePrefetching {
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        for var indexPath in indexPaths {
+            let doc = docs[indexPath.row % docs.count]
+            
+            let contentUrl = doc.data()["content"] as! String
+            let gsReference = storage.reference(forURL: contentUrl)
+            
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            gsReference.getData(maxSize: 15 * 1024 * 1024) { data, error in
+                if let error = error {
+                    print(error)
+                } else {
+                    do {
+                        try Disk.save(data!, to: .caches, as: gsReference.fullPath)
+                    } catch let error {
+                        print(error)
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
