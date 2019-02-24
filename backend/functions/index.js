@@ -62,19 +62,19 @@ exports.post = functions.region('europe-west1').https.onCall(async (data, contex
             userId = doc.id;
         });
 
-    const doc = await post.add({
-        content: contenturl,
-        date: new Date(),
-        likes: [],
-        likesCount: 0,
-        locationid: new firebase.firestore.GeoPoint(lat, lon),
-        userid: db.doc("/users/" + userId)
-    });
+        const doc = await post.add({
+            content: contenturl,
+            date: new Date(),
+            likes: [],
+            likesCount: 0,
+            locationid: new firebase.firestore.GeoPoint(lat, lon),
+            userid: db.doc("/users/" + userId)
+        });
 
-    return doc.id;
+        return doc.id;
     } catch(er) {
-      console.error(er);
-      return null;
+        console.error(er);
+        return null;
     }
 });
 
