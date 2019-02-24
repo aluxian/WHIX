@@ -1,17 +1,20 @@
 const functions = require('firebase-functions');
+const firebase = require("firebase-admin");
 const md5 = require('md5');
 
-let db = functions.firestore;
+firebase.initializeApp();
+
+let db = firebase.firestore();
 
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
-// exports.helloWorld = functions.https.onRequest((request, response) => {
+// exports.helloWorld = functions.region('europe-west1').https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
 
-exports.login = functions.https.onCall(async (data, context) => {
+exports.login = functions.region('europe-west1').https.onCall(async (data, context) => {
     const email = data.email.trim();
     const username = data.username.trim();
     let users = db.collection("users");
@@ -46,7 +49,7 @@ exports.login = functions.https.onCall(async (data, context) => {
     }
 });
 
-exports.post = functions.https.onCall(async (data, context) => {
+exports.post = functions.region('europe-west1').https.onCall(async (data, context) => {
     const { contenturl, username, lat, lon } = data;
     let post = db.collection("post");
     let users = db.collection("users");
@@ -64,7 +67,7 @@ exports.post = functions.https.onCall(async (data, context) => {
             date: new Date(),
             likes: [],
             likesCount: 0,
-            locationid: new db.GeoPoint(lat, lon),
+            locationid: new firebase.firestore.GeoPoint(lat, lon),
             userid: db.doc("/users/" + userId)
         });
 
@@ -112,10 +115,10 @@ async function toggleLike(data, like) {
     }
 }
 
-exports.like = functions.https.onCall(async (data, context) => {
+exports.like = functions.region('europe-west1').https.onCall(async (data, context) => {
    return await toggleLike(data, true);
 });
 
-exports.unlike = functions.https.onCall(async (data, context) => {
+exports.unlike = functions.region('europe-west1').https.onCall(async (data, context) => {
     return await toggleLike(data, false);
 });
